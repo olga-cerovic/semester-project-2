@@ -29,15 +29,18 @@
       crossorigin="anonymous"
     ></script>
 
+    <!--   ADOBE FONTS   -->
+    <link rel="stylesheet" href="https://use.typekit.net/zmg7udx.css" />
+
     <!--   STYLES   -->
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link href="/css/styles.css" rel="stylesheet" />
     <title>Brush | Home</title>
   </head>
   <body>
     <header>
       <!-- As a link -->
-      <nav class="navbar bg-light container">
-        <div class="container-fluid">
+      <nav class="navbar">
+        <div class="container">
           <a class="navbar-brand" href="index.html">Navbar</a>
           <div class="upper-nav-icons">
             <i class="fa-solid fa-user"></i>
@@ -45,7 +48,7 @@
           </div>
         </div>
       </nav>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg bg-dark container-fluid">
         <div class="container">
           <button
             class="navbar-toggler"
@@ -81,35 +84,37 @@
           </div>
         </div>
       </nav>
-      <ul class="nav container">
-        <li class="nav-item">
-          <div class="nav-info-section">
-            <a class="nav-link" href="#">
-              <i class="fa-solid fa-check"></i> Free delivery</a
+      <nav class="nav container-fluid">
+        <ul class="nav container">
+          <li class="nav-item">
+            <div class="nav-info-section">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-check"></i> Free delivery</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="fa-solid fa-check"></i> Home Delivery</a
             >
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            ><i class="fa-solid fa-check"></i> Home Delivery</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            ><i class="fa-solid fa-check"></i> Best Offers</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#"
-            ><i class="fa-solid fa-check"></i> Customer Service 24/7</a
-          >
-        </li>
-      </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="fa-solid fa-check"></i> Best Offers</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="fa-solid fa-check"></i> Customer Service 24/7</a
+            >
+          </li>
+        </ul>
+      </nav>
 
       <!--   CAROUSEL   -->
       <div
         id="carouselExampleCaptions"
-        class="carousel slide"
+        class="carousel slide container"
         data-bs-ride="false"
       >
         <div class="carousel-inner">
@@ -130,9 +135,11 @@
       </div>
     </header>
     <main>
-      <hr />
-      <div class="w-25 p-3 subheading" style="background-color: #eee">
-        <h2>Featured Products</h2>
+      <div class="subheading-container">
+        <hr />
+        <div class="w-25 p-3 subheading" style="background-color: #fff">
+          <h2>Featured Products</h2>
+        </div>
       </div>
       <div class="container featured-products-container">
         <div class="row">
@@ -248,21 +255,70 @@
           </div>
         </div>
       </div>
-
-      <hr />
-      <div class="w-25 p-3 subheading" style="background-color: #eee">
-        <h2>Popular Brands</h2>
+      <div class="subheading-container">
+        <hr />
+        <div class="w-25 p-3 subheading" style="background-color: #fff">
+          <h2>Popular Brands</h2>
+        </div>
       </div>
-      <div class="container text-center">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
-          <div class="col">Act Acre+</div>
+      <div class="brand-container">
+        <div class="container text-center">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+            <div
+              class="col w-25 p-3 brand-box"
+              style="background-color: #eae6e5"
+            >
+              Act Acre+
+            </div>
+          </div>
         </div>
       </div>
     </main>
