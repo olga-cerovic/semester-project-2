@@ -1,0 +1,71 @@
+.brand-box {
+  margin-right: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.brand-container {
+  text-align: center !important;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3rem 8rem 3rem 8rem;
+  width: 100%;
+  color: var(--background-dark);
+  font-size: 1em;
+  align-items: center;
+}
+
+.contact-us,
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+.contact-us > a {
+  text-decoration: none;
+  /* color: #fff; */
+}
+
+.follow-us,
+.payment-options {
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+}
+
+.follow-us > i {
+  margin-right: 20px;
+}
+
+.follow-us:hover {
+  cursor: pointer;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    display: flex;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .follow {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .payment {
+    margin-top: 2rem;
+  }
+}
