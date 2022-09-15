@@ -1,0 +1,80 @@
+.form-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+}
+
+.edit-form {
+  display: none;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form > div {
+  margin-bottom: 1.3rem;
+}
+
+form input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+/*Messages styling*/
+
+.message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.message.error {
+  border-color: red;
+  color: white;
+  background: red;
+}
+
+.message.warning {
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  color: white;
+  background: orangered;
+  border: none;
+}
+
+.message.success {
+  border-color: green;
+  color: white;
+  background: green;
+}
+
+.login-button {
+  width: 100%;
+  height: 40px;
+  background: olive;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete {
+  background: darkred;
+}
+
+#clear {
+  max-width: 300px;
+  margin-left: 1rem;
+}
+
+.login-title {
+  text-align: center;
+}

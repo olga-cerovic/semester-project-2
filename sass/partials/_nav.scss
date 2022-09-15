@@ -1,0 +1,33 @@
+.bg-dark {
+  background-color: $nav-colour !important;
+}
+
+.navbar-nav .nav-link {
+  /* color: white !important; */
+  color: $primary-colour !important;
+}
+
+.navbar-nav .active {
+  /* color: black; */
+  text-decoration: underline;
+}
+
+.bg-light {
+  background-color: $primary-colour !important;
+}
+
+.nav {
+  background-color: $background-colour !important;
+}
+
+.navbar-nav .nav-link .active {
+  color: $nav-colour !important;
+}
+
+.nav-info-section {
+  display: block;
+}
+
+.fa-user {
+  margin-right: 2rem;
+}

@@ -1,0 +1,45 @@
+.subheading {
+  display: flex;
+  position: relative;
+  //   transform: translate(140%, -60px);
+  text-align: center;
+}
+
+.subheading-container {
+  margin-top: 5rem;
+}
+
+h2 {
+  margin: auto;
+}
+
+.grid-container {
+  padding-bottom: 8rem;
+}
+
+.carousel-caption {
+  left: -30%;
+  bottom: 40%;
+}
+
+/* .navbar .container {
+    justify-content: space-between;
+  } */
+
+.carousel-caption {
+  left: -30%;
+  bottom: 40%;
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}

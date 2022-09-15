@@ -1,15 +1,14 @@
-@import "/sass/partials/custom";
-
+@import "./partials/custom";
 @import "../bootstrap-scss/mixins/banner";
 @include bsBanner("");
 
 // scss-docs-start import-stack
 // Configuration
-@import "/bootstrap-scss/functions";
-@import "/bootstrap-scss/variables";
-@import "/bootstrap-scss/maps";
-@import "/bootstrap-scss/mixins";
-@import "/bootstrap-scss/utilities";
+@import "../bootstrap-scss/functions";
+@import "../bootstrap-scss/variables";
+@import "../bootstrap-scss/maps";
+@import "../bootstrap-scss/mixins";
+@import "../bootstrap-scss/utilities";
 
 // Layout & components
 @import "../bootstrap-scss/root";
@@ -50,3 +49,8 @@
 // Utilities
 @import "../bootstrap-scss/utilities/api";
 // scss-docs-end import-stack
+
+@import "./partials/home";
+@import "./partials/layout";
+@import "./partials/nav";
+@import "./partials/login";
