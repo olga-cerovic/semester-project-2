@@ -7,10 +7,17 @@ const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const message = document.querySelector(".message-container");
+const logoutButtonElement = document.querySelector(".logout");
 
 createMenu();
 
 form.addEventListener("submit", submitForm);
+logoutButtonElement.addEventListener("click", handleLogout);
+
+function handleLogout() {
+  localStorage.clear();
+  window.location.reload();
+}
 
 function submitForm(event) {
   event.preventDefault();

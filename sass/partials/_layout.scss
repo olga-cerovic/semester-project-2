@@ -50,6 +50,16 @@ h5 {
   font-size: 1em;
 }
 
+.card-custom {
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.go-to-product {
+  all: unset;
+}
+
 @media (max-width: 992px) {
   .footer {
     display: flex;
