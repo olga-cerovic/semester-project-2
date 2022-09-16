@@ -14,7 +14,7 @@ export function createMenu() {
   if (username) {
     authLink = `<a href="add.html" class="${[
       pathname === "/add.html" ? "active" : "",
-    ]}">Add Article</a>
+    ]}">Add Product</a>
                     <span class="greeting">Hi, ${username}</span>`;
   }
 
@@ -22,11 +22,6 @@ export function createMenu() {
                                 <a href="/" class="${[
                                   pathname === "/" ? "active" : "",
                                 ]}">Home</a>
-                                <a href="favorites.html" class="${[
-                                  pathname === "/favorites.html"
-                                    ? "active"
-                                    : "",
-                                ]}">Favorites</a>
                                 ${authLink}
                             </div>`;
 }

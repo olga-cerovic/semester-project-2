@@ -5,8 +5,6 @@ const productElement = document.getElementById("product-details");
 let url = new URL(window.location.href);
 let search_params = url.searchParams;
 
-// get value of "id" parameter
-// "100"
 console.log(search_params.get("id"));
 
 console.log(search_params);
@@ -29,14 +27,6 @@ async function getProduct() {
 
     console.log(localStorage.getItem("user"));
 
-    let deleteButton = "";
-
-    if (localStorage.getItem("user")) {
-      deleteButton = `<button class="btn btn-primary" onclick='deleteProduct()'>
-          Delete Product
-        </button>`;
-    }
-
     productElement.innerHTML = `<div class="col-md-6 col-lg-3">
     <div class="card card-custom">
         <img src="${product.image.url}" alt=""/>
@@ -44,8 +34,6 @@ async function getProduct() {
                 <h5 class="card-title">${product.title}</h5>
                 <p class="card-text">${product.price}</p>
                 <a href="product-details.html?id=${product.id}" class="btn btn-primary">See Product</a>
-                ${deleteButton}
-
             </div>
         </div>
     </div>
@@ -58,7 +46,3 @@ async function getProduct() {
 }
 
 getProduct();
-
-function deleteProduct(id) {
-  console.log("deleting", id);
-}

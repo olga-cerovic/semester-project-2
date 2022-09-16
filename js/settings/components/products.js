@@ -1,7 +1,7 @@
 import { baseUrl } from "./login/api.js";
 import displayMessage from "./login/displayMessage.js";
 
-const allProductsRowElement = document.getElementById("all-products-row");
+const allProductsRowElement = document.getElementById("shop-row");
 
 // console.log(allProductsRowElement);
 
@@ -37,30 +37,6 @@ export async function getProducts(elementId, filters = "") {
   }
 }
 
-if (window.location.href.includes("all-products")) {
-  getProducts("all-products-row");
+if (window.location.href.includes("shop")) {
+  getProducts("shop-row");
 }
-
-// const fetchAllProducts = async () => {
-//   const token = localStorage.getItem("token");
-
-//   console.log(token);
-
-//   const options = {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//       Authorization: `Bearer ${token}`,
-//     },
-//   };
-
-//   try {
-//     const response = await fetch(productsUrl, options);
-//     const json = await response.json();
-//     console.log(json);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
-// fetchAllProducts();
