@@ -12,8 +12,8 @@ export function createMenu() {
   ]}">Login</a>`;
 
   if (username) {
-    authLink = `<a href="add.html" class="${[
-      pathname === "/add.html" ? "active" : "",
+    authLink = `<a href="admin-add-product.html" class="${[
+      pathname === "/admin-add-product.html" ? "active" : "",
     ]}">Add Product</a>
                     <span class="greeting">Hi, ${username}</span>`;
   }
