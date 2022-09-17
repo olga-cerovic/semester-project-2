@@ -1,5 +1,8 @@
 import { baseUrl } from "./login/api.js";
 import displayMessage from "./login/displayMessage.js";
+// import { createMenu } from "./createMenu.js";
+
+// createMenu();
 
 const allProductsRowElement = document.getElementById("shop-row");
 
@@ -7,7 +10,7 @@ const allProductsRowElement = document.getElementById("shop-row");
 
 const productsUrl = baseUrl + "products";
 
-export async function getProducts(elementId, filters = "") {
+export async function getProducts(elementId, filters = "", param = 0) {
   const allProductsRowElement = document.getElementById(elementId);
 
   console.log(allProductsRowElement);
@@ -18,8 +21,9 @@ export async function getProducts(elementId, filters = "") {
 
     allProductsRowElement.innerHTML = "";
 
-    json.forEach(function (product) {
-      allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
+    if (param == 0) {
+      json.forEach(function (product) {
+        allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
                                             <div class="card card-custom">
                                                 <img src="${product.image.url}" alt=""/>
                                                     <div class="card">
@@ -30,7 +34,23 @@ export async function getProducts(elementId, filters = "") {
                                                 </div>
                                             </div>
                                           </div>`;
-    });
+      });
+    } else {
+      json.forEach(function (product) {
+        allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
+                                              <div class="card card-custom">
+                                                  <img src="${product.image.url}" alt=""/>
+                                                      <div class="card">
+                                                          <h5 class="card-title">${product.title}</h5>
+                                                          <p class="card-text">${product.price}</p>
+                                                          <a href="admin-edit-product.html?id=${product.id}" class="btn btn-primary">Edit Product</a>
+                                                          <a href="" class="btn btn-danger">Delete Product</a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                            </div>`;
+      });
+    }
   } catch (error) {
     console.log(error);
     displayMessage("error", error, elementId);
