@@ -8,6 +8,10 @@ label {
 }
 
 .edit-form {
+  display: block;
+}
+
+#successUpdate {
   display: none;
 }
 
@@ -77,4 +81,16 @@ textarea {
 
 .login-title {
   text-align: center;
+}
+
+/*ADMIN EDIT PAGE*/
+
+#imageEdit {
+  padding-top: 0.5rem !important;
+}
+
+/*ADMIN MENU */
+
+.background-nav-admin {
+  background-color: $primary-colour-hover;
 }

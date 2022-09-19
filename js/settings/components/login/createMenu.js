@@ -18,10 +18,15 @@ export function createMenu() {
                     <span class="greeting">Hi, ${username}</span>`;
   }
 
-  menuContainer.innerHTML = `<div class="menu">
-                                <a href="/" class="${[
-                                  pathname === "/" ? "active" : "",
-                                ]}">Home</a>
+  menuContainer.innerHTML = `<nav class="navbar navbar-expand-lg background-nav-admin container-fluid">
+                                <div class="menu container">
+                                   <a href="/admin-home.html" && pathname === "/admin-home.html" class="${[
+                                     pathname === "/admin-home.html"
+                                       ? "active"
+                                       : "",
+                                   ]}">Home</a>
                                 ${authLink}
-                            </div>`;
+                               </div>
+                              </nav>`;
 }
+

@@ -47,11 +47,40 @@
       </nav>
     </header>
     <main>
-      <!-- <div class="form-container"> -->
       <div class="menu-container"></div>
-      <div class="container featured-products-container"></div>
+      <div class="container add-form">
+        <div class="menu-container"></div>
+
+        <h1>Add Product</h1>
+
+        <form>
+          <div>
+            <div class="message-container imgCon"></div>
+            <label for="img">Photo Url</label>
+            <input id="img" />
+          </div>
+          <div>
+            <div class="message-container nameCon"></div>
+            <label for="name">Name</label>
+            <input id="name" />
+          </div>
+          <div>
+            <div class="message-container priceCon"></div>
+            <label for="price">Price</label>
+            <input id="price" />
+          </div>
+          <div>
+            <div class="message-container descCon"></div>
+            <label for="description">Description</label>
+            <textarea id="description"></textarea>
+          </div>
+          <label for="featured">Featured</label>
+          <input type="checkbox" id="featured" name="" value=""/><br />
+          <button class="btn btn-primary" type="submit">Add</button>
+        </form>
+      </div>
       <!-- </div> -->
     </main>
-    <script src="/js/settings/components/products.js" type="module"></script>
+    <script src="/js/settings/components/login/add.js" type="module"></script>
   </body>
 </html>

@@ -2,6 +2,8 @@ import displayMessage from "./displayMessage.js";
 import { saveToken, saveUser } from "./storage.js";
 import { baseUrl } from "./api.js";
 import { createMenu } from "./createMenu.js";
+import { logOut } from "./logout.js";
+
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
@@ -12,12 +14,9 @@ const logoutButtonElement = document.querySelector(".logout");
 createMenu();
 
 form.addEventListener("submit", submitForm);
-logoutButtonElement.addEventListener("click", handleLogout);
 
-function handleLogout() {
-  localStorage.clear();
-  window.location.reload();
-}
+
+
 
 function submitForm(event) {
   event.preventDefault();
