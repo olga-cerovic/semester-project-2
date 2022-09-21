@@ -11,6 +11,8 @@ export function checkLogin() {
   } else {
     userLogin.style.display = "inline-block";
     logoutButtonElement.style.display = "none";
-    logoutButtonElement.removeEventListener();
+    if (JSON.parse(localStorage.getItem("user"))) {
+      logoutButtonElement.removeEventListener();
+    }
   }
 }

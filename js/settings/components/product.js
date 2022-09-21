@@ -1,5 +1,7 @@
 import { baseUrl } from "./login/api.js";
 
+
+
 export function getProduct() {
   const productElement = document.getElementById("product-details");
 
@@ -15,10 +17,14 @@ export function getProduct() {
         return;
       }
 
+        
+      product=searchFilter(product);
+
+
       productElement.innerHTML = `<div class="card mb-3 product-centered" style="max-width: 780px;">
 <div class="row g-0">
   <div class="col-md-4">
-    <img src="${product.image.url}" class="img-fluid rounded-start" alt="...">
+    <img src="${product.image.url}" class="img-fluid" alt="...">
   </div>
   <div class="col-md-8">
     <div class="card-body">
@@ -31,13 +37,14 @@ export function getProduct() {
 </div>
 </div>`;
 
-      document, get;
-
       console.log(json[0]);
     })
     .catch((error) => {
       console.log(error);
     });
 }
+
+
+
 
 getProduct();

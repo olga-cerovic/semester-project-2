@@ -1,5 +1,4 @@
 .form-container {
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -83,14 +82,33 @@ textarea {
   text-align: center;
 }
 
-/*ADMIN EDIT PAGE*/
+/*ADMIN*/
 
 #imageEdit {
   padding-top: 0.5rem !important;
 }
 
-/*ADMIN MENU */
-
 .background-nav-admin {
   background-color: $primary-colour-hover;
+}
+
+.menu {
+  justify-content: left !important;
+
+  a {
+    padding-right: 2rem;
+    color: $primary-colour;
+  }
+}
+
+.edit-btn {
+  background-color: $primary-colour-hover;
+  border: 2px solid $primary-colour-hover;
+  margin-bottom: 0.5rem;
+
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $primary-colour-hover;
+    color: $primary-colour-hover;
+  }
 }

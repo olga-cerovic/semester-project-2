@@ -18,7 +18,7 @@ export function createMenu() {
                     <span class="greeting">Hi, ${username}</span>`;
   }
 
-  menuContainer.innerHTML = `<nav class="navbar navbar-expand-lg background-nav-admin container-fluid">
+  menuContainer.innerHTML = `<nav class="navbar navbar-expand-lg background-nav-admin">
                                 <div class="menu container">
                                    <a href="/admin-home.html" && pathname === "/admin-home.html" class="${[
                                      pathname === "/admin-home.html"
@@ -29,4 +29,3 @@ export function createMenu() {
                                </div>
                               </nav>`;
 }
-

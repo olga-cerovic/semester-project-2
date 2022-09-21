@@ -3,14 +3,23 @@ import displayMessage from "./login/displayMessage.js";
 
 import { getToken } from "./login/storage.js";
 // import { createMenu } from "./createMenu.js";
-
 // createMenu();
 
-const allProductsRowElement = document.getElementById("shop-row");
+// const allProductsRowElement = document.getElementById("shop-row");
+
+const productsUrl = baseUrl + "products";
+
+let searchTextbox;
 
 // console.log(allProductsRowElement);
 
-const productsUrl = baseUrl + "products";
+if (window.location.href.includes("shop")) {
+  searchTextbox = document.getElementById("search-field");
+}
+
+if (window.location.href.includes("admin-home")) {
+  searchTextbox = document.getElementById("search-field");
+}
 
 export async function getProducts(elementId, filters = "", param = 0) {
   const allProductsRowElement = document.getElementById(elementId);
@@ -19,13 +28,20 @@ export async function getProducts(elementId, filters = "", param = 0) {
 
   try {
     const response = await fetch(productsUrl + filters);
-    const json = await response.json();
+    let json = await response.json();
 
     allProductsRowElement.innerHTML = "";
-    console.log(json);
-    if (param == 0) {
-      json.forEach(function (product) {
-        allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
+    if (
+      window.location.href.includes("shop") ||
+      window.location.href.includes("admin-home")
+    ) {
+      json = searchFilter(json);
+    }
+
+    if (json.length > 0) {
+      if (param == 0) {
+        json.forEach(function (product) {
+          allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
                                             <div class="card card-custom">
                                                 <img src="${
                                                   product.image_url
@@ -46,10 +62,10 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                 </div>
                                             </div>
                                           </div>`;
-      });
-    } else {
-      json.forEach(function (product) {
-        allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
+        });
+      } else {
+        json.forEach(function (product) {
+          allProductsRowElement.innerHTML += `<div class="col-md-6 col-lg-3">
                                               <div class="card card-custom">
                                                   <img src="${
                                                     product.image_url != null
@@ -65,7 +81,7 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                           }</p>
                                                           <a href="admin-edit-product.html?id=${
                                                             product.id
-                                                          }" class="btn btn-primary">Edit Product</a>
+                                                          }" class="btn btn-primary edit-btn">Edit Product</a>
                                                           <a href="" class="btn btn-danger deleteProduct"  data-id="${
                                                             product.id
                                                           }">Delete Product</a>
@@ -73,22 +89,23 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                   </div>
                                               </div>
                                             </div>`;
-      });
+        });
+      }
 
-      const deleteButtons = document.querySelectorAll(".deleteProduct");
+      if (window.location.href.includes("admin")) {
+        const deleteButtons = document.querySelectorAll(".deleteProduct");
 
-      deleteButtons.forEach((button) => {
-        button.addEventListener("click", deleteProduct);
-      });
+        deleteButtons.forEach((button) => {
+          button.addEventListener("click", deleteProduct);
+        });
+      }
+    } else {
+      allProductsRowElement.innerHTML = "No items!!!";
     }
   } catch (error) {
     console.log(error);
     displayMessage("error", error, elementId);
   }
-}
-
-if (window.location.href.includes("shop")) {
-  getProducts("shop-row");
 }
 
 async function deleteProduct(e) {
@@ -120,4 +137,38 @@ async function deleteProduct(e) {
       console.log(error);
     }
   }
+}
+
+function searchFilter(data) {
+  const value = searchTextbox.value;
+
+  if (value) {
+    let array = data.filter((product) => {
+      if (
+        product.title.toUpperCase().indexOf(value.trim().toUpperCase()) != -1
+      ) {
+        return product;
+      }
+    });
+    return array;
+  }
+
+  return data;
+}
+if (window.location.href.includes("shop")) {
+  const searchTextbox = document.getElementById("search-field");
+  searchTextbox.addEventListener("keyup", () => {
+    getProducts("shop-row");
+  });
+  getProducts("shop-row");
+}
+
+if (window.location.href.includes("admin-home")) {
+  const searchTextbox = document.getElementById("search-field");
+
+  searchTextbox.addEventListener("keyup", () => {
+    getProducts("shop-row", "", 1);
+  });
+
+  getProducts("shop-row", "", 1);
 }

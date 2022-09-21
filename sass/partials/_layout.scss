@@ -101,10 +101,27 @@ h5 {
   border: none;
 }
 
+.card-body {
+  padding-top: 0;
+}
+
+.img-fluid {
+  height: 100%;
+}
+
+// .cart-product {
+//   justify-content: baseline;
+// }
+
+#product-details {
+  margin-top: 3rem;
+}
+
 /*   BUTTONS   */
 .btn {
   background-color: $nav-colour;
   border: 2px solid $nav-colour;
+  // color: $primary-colour;
   &:hover {
     background-color: $primary-colour;
     border: 2px solid $nav-colour;
