@@ -68,6 +68,80 @@ h5 {
   width: 100%;
 }
 
+/*  SHOPPING CART   */
+
+.cart-container {
+  h2 {
+    padding-top: 3rem;
+  }
+
+  hr {
+    margin-top: 1.5rem;
+  }
+
+  .total-price {
+    justify-content: end;
+  }
+
+  .check-out-btn {
+    max-width: 540px;
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
+
+.cart-background {
+  margin-top: 1.5rem;
+  background-color: $background-colour;
+  padding: 1.8rem 1.8rem 0 1.8rem;
+  border-radius: 0;
+}
+
+.card {
+  border: none;
+}
+
+/*   BUTTONS   */
+.btn {
+  background-color: $nav-colour;
+  border: 2px solid $nav-colour;
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $nav-colour;
+    color: $nav-colour;
+  }
+}
+
+.search-btn {
+  align-content: center;
+}
+
+button {
+  border-width: 0;
+  border-style: none;
+  border-color: $primary-colour;
+  background-color: $primary-colour;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    width: 100%;
+    border: 0;
+  }
+}
+
+.dropdown-custom {
+  margin-bottom: 1rem;
+}
+
+/*   MEDIA QUERIES   */
+
 @media (max-width: 992px) {
   .footer {
     display: flex;

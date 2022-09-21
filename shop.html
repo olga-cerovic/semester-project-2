@@ -126,6 +126,51 @@
         </div>
       </div>
 
+      <!--------- SEARCH  ---------->
+
+      <div class="search-form container">
+        <a href="#"
+          ><i class="fa-solid fa-magnifying-glass search-btn container"></i
+        ></a>
+        <!-- <button class="search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button> -->
+        <input type="text" placeholder="Search..." />
+      </div>
+      <hr class="container" />
+
+      <!--------- FILTER BY PRICE ---------->
+
+      <!-- <div class="container">
+        <label for="customRange2" class="form-label">Filter by price</label>
+        <input
+          type="range"
+          class="form-range"
+          min="0"
+          max="5"
+          step="0.5"
+          id="customRange2"
+        />
+      </div> -->
+
+      <div class="container">
+        <div class="dropdown">
+          <button
+            class="dropdown-toggle dropdown-custom"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Filter by price
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">1-10 nok</a></li>
+            <li><a class="dropdown-item" href="#">10-100 nok</a></li>
+            <li><a class="dropdown-item" href="#">100-1000 nok</a></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="container featured-products-container">
         <div class="row justify-content-center g-5" id="shop-row"></div>
       </div>
