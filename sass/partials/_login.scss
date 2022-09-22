@@ -36,42 +36,42 @@ textarea {
 .message {
   width: 100%;
   padding: 1rem;
-  border: 1px solid grey;
-  color: grey;
+  border: 1px solid $background-colour;
+  color: $background-colour;
 }
 
 .message.error {
-  border-color: red;
-  color: white;
-  background: red;
+  // border-color: $nav-colour;
+  color: $primary-colour;
+  background: $nav-colour;
 }
 
 .message.warning {
   padding: 0.7rem;
   margin-bottom: 1rem;
-  color: white;
-  background: orangered;
+  color: $primary-colour;
+  background: $nav-colour;
   border: none;
 }
 
 .message.success {
-  border-color: green;
-  color: white;
-  background: green;
+  border-color: $primary-colour-hover;
+  color: $primary-colour;
+  background: $primary-colour-hover;
 }
 
 .login-button {
   width: 100%;
   height: 40px;
-  background: olive;
-  color: white;
+  background: $primary-colour-hover;
+  color: $primary-colour;
   border: none;
   cursor: pointer;
 }
 
-.delete {
-  background: darkred;
-}
+// .delete {
+//   background: darkred;
+// }
 
 #clear {
   max-width: 300px;
@@ -111,4 +111,23 @@ textarea {
     border: 2px solid $primary-colour-hover;
     color: $primary-colour-hover;
   }
+}
+
+.delete-btn {
+  all: unset;
+  text-align: center;
+  background-color: $nav-colour;
+  border: 2px solid $nav-colour;
+  padding: 0.3rem;
+  border-radius: 6px;
+  color: $primary-colour;
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $nav-colour;
+    color: $nav-colour;
+  }
+}
+
+.nav-login {
+  justify-content: end;
 }
