@@ -101,7 +101,7 @@
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .banner-container {
     .centered {
       left: 25%;
@@ -114,6 +114,14 @@
       h5 {
         font-size: 0.7rem;
       }
+    }
+  }
+
+  .nav-info-section {
+    a {
+      font-size: 0.8rem;
+      // margin-right: 0;
+      padding-right: 0;
     }
   }
 }
