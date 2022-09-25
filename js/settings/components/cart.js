@@ -32,10 +32,11 @@ function renderCart() {
              alt="..."
            />
          </div>
-         <div class="col-md-8 cartDeatils">
+         <div class="col-md-8 cart-details">
            <div class="container">
              <div class="row card-body">
                <h5 class="col-md-5 card-title">${product.title}</h5>
+               <div class="price-quantity">
                <input
                  type="number"
                  max="20"
@@ -45,13 +46,15 @@ function renderCart() {
                  class="col-md-4 quantity"
                />
                <p class="col-md-3">
-                 <small class="text-muted">Price: <span class="price">${
-                   product.price
-                 }</span> </small>
+                 <span><span class="price">${
+                   product.price + " $"
+                 }</span> </span>
                </p>
+               </div>
              </div>
            </div>
-         </div>`;
+         </div>
+         <hr/>`;
 
           totalPriceCart();
 
@@ -72,7 +75,7 @@ function renderCart() {
       }
     }, 200);
   } else {
-    cartRoot.innerHTML = "Nema nista u korpi!";
+    cartRoot.innerHTML = "Your Cart is empty!";
   }
 }
 renderCart();

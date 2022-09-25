@@ -19,14 +19,6 @@ h2 {
   text-align: center !important;
 }
 
-
-.cartImage{
-
-
-
-
-
-}
 .footer {
   display: flex;
   flex-direction: row;
@@ -122,8 +114,40 @@ h5 {
   border: none;
 }
 
-.card-body {
-  padding-top: 0;
+.cart-details {
+  .card-body {
+    padding-left: 0;
+    padding-top: 0;
+
+    h5 {
+      width: 100%;
+    }
+  }
+
+  input {
+    width: 3.3rem;
+    height: 2rem;
+    // padding-right: 0;
+    margin-right: 2rem;
+    padding-bottom: 0;
+  }
+
+  .card-title {
+    padding-left: 0;
+  }
+
+  .col-md-3 {
+    padding-left: 0;
+  }
+
+  .price-quantity {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-left: 0;
+    margin-top: 0.8rem;
+  }
 }
 
 .img-fluid {
