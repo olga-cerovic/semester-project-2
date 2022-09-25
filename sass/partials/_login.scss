@@ -112,9 +112,9 @@ textarea {
 .edit-btn,
 .login-button,
 .add-btn {
-  background-color: $primary-colour-hover;
-  border: 2px solid $primary-colour-hover;
-  margin-bottom: 0.5rem;
+  // background-color: $primary-colour-hover;
+  // border: 2px solid $primary-colour-hover;
+  // margin-bottom: 0.5rem;
 
   &:hover {
     background-color: $primary-colour;
@@ -123,19 +123,41 @@ textarea {
   }
 }
 
-.delete-btn {
+.delete-btn,
+.edit-btn,
+.add-btn {
   all: unset;
   text-align: center;
-  background-color: $nav-colour;
-  border: 2px solid $nav-colour;
   padding: 0.3rem;
   border-radius: 6px;
   color: $primary-colour;
   &:hover {
+    // background-color: $primary-colour;
+    // border: 2px solid $nav-colour;
+    // color: $nav-colour;
+    cursor: pointer;
+  }
+}
+
+.delete-btn {
+  background-color: $nav-colour;
+  border: 2px solid $nav-colour;
+  margin-top: 0.5rem;
+  &:hover {
     background-color: $primary-colour;
     border: 2px solid $nav-colour;
     color: $nav-colour;
-    cursor: pointer;
+  }
+}
+
+.edit-btn,
+.login-button {
+  background-color: $primary-colour-hover;
+  border: 2px solid $primary-colour-hover;
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $primary-colour-hover;
+    color: $primary-colour-hover;
   }
 }
 

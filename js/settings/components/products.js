@@ -81,7 +81,7 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                           }</p>
                                                           <a href="admin-edit-product.html?id=${
                                                             product.id
-                                                          }" class="btn btn-primary edit-btn">Edit Product</a>
+                                                          }" class="edit-btn">Edit Product</a>
                                                           <a href="" class="delete-btn deleteProduct"  data-id="${
                                                             product.id
                                                           }">Delete Product</a>
