@@ -1,9 +1,11 @@
 import { baseUrl } from "./api.js";
 import { createMenu } from "./createMenu.js";
 import displayMessage from "./displayMessage.js";
+import { logOut } from "./logout.js";
 import { getToken } from "./storage.js";
 
 createMenu();
+logOut();
 
 const form = document.querySelector("form");
 const img = document.querySelector("#img");
@@ -55,7 +57,6 @@ function submitForm(event) {
 }
 
 async function addProduct(img, name, price, description, feature) {
-
   const url = baseUrl + "products";
   const data = JSON.stringify({
     image_url: img,
@@ -73,7 +74,7 @@ async function addProduct(img, name, price, description, feature) {
     body: data,
     headers: {
       "Content-Type": "application/json",
-    //   Authorization: `Bearer ${token}`,
+      //   Authorization: `Bearer ${token}`,
     },
   };
 
@@ -81,14 +82,8 @@ async function addProduct(img, name, price, description, feature) {
     const response = await fetch(url, options);
     const json = await response.json();
 
-
-
     console.log(json);
-
   } catch (error) {
-
     console.log(error);
-
   }
-
 }

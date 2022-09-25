@@ -1,5 +1,5 @@
-import { baseUrl } from "./login/api.js";
+// import { baseUrl } from "./login/api.js";
 
-import { getToken } from "./login/storage.js";
+// import { getToken } from "./login/storage.js";
 
-export default function deleteButton(id);
+// export default function deleteButton(id);

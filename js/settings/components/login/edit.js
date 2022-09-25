@@ -1,6 +1,7 @@
 import { baseUrl } from "./api.js";
 import { createMenu } from "./createMenu.js";
 import displayMessage from "./displayMessage.js";
+import { logOut } from "./logout.js";
 import { getToken } from "./storage.js";
 createMenu();
 
@@ -17,6 +18,7 @@ let url = new URL(window.location.href);
 let search_params = url.searchParams;
 const id = search_params.get("id");
 getProduct();
+logOut();
 
 async function getProduct() {
   try {

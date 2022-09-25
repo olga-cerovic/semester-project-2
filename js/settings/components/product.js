@@ -1,7 +1,5 @@
 import { baseUrl } from "./login/api.js";
 
-
-
 export function getProduct() {
   const productElement = document.getElementById("product-details");
 
@@ -17,25 +15,25 @@ export function getProduct() {
         return;
       }
 
-        
-      product=searchFilter(product);
-
-
       productElement.innerHTML = `<div class="card mb-3 product-centered" style="max-width: 780px;">
 <div class="row g-0">
-  <div class="col-md-4">
+  <div class="col-md-4 order-md-1">
     <img src="${product.image.url}" class="img-fluid" alt="...">
   </div>
-  <div class="col-md-8">
+  <div class="col-md-8 order-md-2">
     <div class="card-body">
     <h5 class="card-title">${product.title}</h5>
               <p class="card-text">${product.price}</p>
               <p class="card-text">${product.description}</p>
-              <a href="product-details.html?id=${product.id}" class="btn btn-primary" id="product${product.id}">Add To Cart</a>
+              <a href="product-details.html?id=${product.id}" class="btn btn-primary productCart" id="product${product.id}"  data-id="${product.id}">Add To Cart</a>
     </div>
   </div>
 </div>
 </div>`;
+
+      document
+        .querySelector(".productCart")
+        .addEventListener("click", insertInCart);
 
       console.log(json[0]);
     })
@@ -44,7 +42,28 @@ export function getProduct() {
     });
 }
 
-
-
-
 getProduct();
+
+function insertInCart(e) {
+  e.preventDefault();
+  let cart = [];
+  let idP = e.target.dataset.id;
+
+  cart = JSON.parse(localStorage.getItem("cart"));
+
+  if (cart) {
+    let array = cart.filter((elem) => elem.id == idP);
+
+    if (array.length > 0) {
+      let arraySlice = cart.filter((elem) => elem.id != idP);
+      localStorage.setItem("cart", JSON.stringify(arraySlice));
+    } else {
+      cart.push({ id: idP });
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  } else {
+    cart = [{ id: idP }];
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
+}

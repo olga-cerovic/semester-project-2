@@ -1,3 +1,12 @@
+h2 {
+  font-family: montserrat, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 .brand-box {
   margin-right: 0.1rem;
   margin-bottom: 1rem;
@@ -122,6 +131,9 @@ h5 {
   background-color: $nav-colour;
   border: 2px solid $nav-colour;
   // color: $primary-colour;
+  font-family: sofia-pro-soft, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   &:hover {
     background-color: $primary-colour;
     border: 2px solid $nav-colour;
@@ -174,6 +186,12 @@ button {
 }
 
 @media (max-width: 660px) {
+  .payment {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
   .payment {
     margin-top: 2rem;
   }
