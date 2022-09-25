@@ -172,3 +172,13 @@ if (window.location.href.includes("admin-home")) {
 
   getProducts("shop-row", "", 1);
 }
+function checkCartNumber() {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  if (cart) {
+    document.getElementById("cartNumber").textContent = cart.length;
+  } else {
+    document.getElementById("cartNumber").textContent = "0";
+  }
+}
+checkCartNumber();

@@ -57,13 +57,27 @@ function insertInCart(e) {
     if (array.length > 0) {
       let arraySlice = cart.filter((elem) => elem.id != idP);
       localStorage.setItem("cart", JSON.stringify(arraySlice));
+      checkCartNumber();
     } else {
       cart.push({ id: idP });
       localStorage.setItem("cart", JSON.stringify(cart));
+      checkCartNumber();
     }
   } else {
     cart = [{ id: idP }];
 
     localStorage.setItem("cart", JSON.stringify(cart));
+    checkCartNumber();
   }
 }
+
+function checkCartNumber() {
+  let cart = JSON.parse(localStorage.getItem("cart"));
+
+  if (cart) {
+    document.getElementById("cartNumber").textContent = cart.length;
+  } else {
+    document.getElementById("cartNumber").textContent = "0";
+  }
+}
+checkCartNumber();

@@ -122,30 +122,38 @@
         <div class="cart-items">
           <div class="card product-centered" style="max-width: 540px">
             <h2>Your Cart</h2>
-            <div class="row g-0 cart-background">
-              <div class="col">
-                <img
-                  src="./images/tatcha-cleanser.jpg"
-                  class="img-fluid"
-                  alt="..."
-                />
-              </div>
-              <div class="col">
-                <div class="card-body text-end">
-                  <h5 class="card-title">Product Title x 1</h5>
-                  <p class="card-text">
-                    <small class="text-muted">Price: </small>
-                  </p>
-                  <!-- <div class="amount-items">
-                    <select name="size" id="size">
-                      <option></option>
-                    </select>
-                  </div> -->
+            <div class="g-0 cart-background container">
+              <div id="cartRoot"></div>
+              <!-- <div class="row productItem">
+                <div class="col-md-4 imageCart">
+                  <img
+                    src="./images/tatcha-cleanser.jpg"
+                    class="img-fluid"
+                    alt="..."
+                  />
                 </div>
+                <div class="col-md-8 cartDeatils">
+                  <div class="container">
+                    <div class="row card-body">
+                      <h5 class="col-md-6 card-title">Product Title</h5>
+                      <input
+                        type="number"
+                        max="20"
+                        min="1"
+                        id="quantity"
+                        value="1"
+                        class="col-md-2"
+                      />
+                      <p class="col-md-4">
+                        <small class="text-muted">Price: </small>
+                      </p>
+                    </div>
+                  </div>
+                </div> -->
               </div>
               <hr />
               <div class="total-price">
-                <p>Total Price:</p>
+                <p>Total Price:<span id="total"></span></p>
               </div>
             </div>
           </div>
