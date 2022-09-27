@@ -1,5 +1,6 @@
 import { baseUrl } from "./login/api.js";
 import { checkLogin } from "./login/checkLogin.js";
+import { checkCartNumber } from "./products.js";
 checkLogin();
 
 const bannerUrl = baseUrl + "home";
@@ -24,5 +25,7 @@ const bannerUrl = baseUrl + "home";
       console.log(error);
     });
 })();
+
+checkCartNumber();
 
 // getBanner();

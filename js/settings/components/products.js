@@ -182,6 +182,8 @@ export function checkCartNumber() {
     } else {
       document.getElementById("cartNumber").textContent = "0";
     }
-    checkCartNumber();
+    // checkCartNumber();
   }
 }
+
+checkCartNumber();
