@@ -109,6 +109,14 @@
 
 /*   MEDIA QUERIES   */
 
+@media (max-width: 1200px) {
+  .banner-container {
+    .centered {
+      left: 25%;
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .banner-container {
     .centered {
@@ -120,7 +128,7 @@
 @media (max-width: 768px) {
   .banner-container {
     .centered {
-      left: 25%;
+      left: 30%;
       h1 {
         font-size: 1.5rem;
       }
