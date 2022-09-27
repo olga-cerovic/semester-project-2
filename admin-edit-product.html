@@ -48,40 +48,42 @@
       <div class="menu-container"></div>
       <div class="container edit-form">
         <div class="menu-container"></div>
+        <div class="edit-product-form">
+          <h2>Edit Product</h2>
+          <div id="successUpdate" class="bg-warning text-primary">
+            Success Update!
+          </div>
 
-        <h1>Edit Product</h1>
-        <div id="successUpdate" class="bg-warning text-primary">
-          Success Update!
+          <form id="form">
+            <div>
+              <label for="img">Photo Url</label>
+              <input id="img" /><br />
+              <img src="" alt="" id="imageEdit" class="img-fluid" />
+              <div class="message-container imgCon"></div>
+            </div>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" />
+              <div class="message-container nameCon"></div>
+            </div>
+            <div>
+              <label for="price">Price</label>
+              <input id="price" />
+              <div class="message-container priceCon"></div>
+            </div>
+            <div>
+              <label for="description">Description</label>
+              <textarea id="description"></textarea>
+              <div class="message-container descCon"></div>
+            </div>
+            <div class="featured-checkbox">
+              <label for="featured">Featured</label>
+              <input type="checkbox" id="featured" name="" value="" />
+            </div>
+            <button class="edit-btn" type="submit">Edit</button>
+          </form>
         </div>
-
-        <form id="form">
-          <div>
-            <label for="img">Photo Url</label>
-            <input id="img" /><br />
-            <img src="" alt="" id="imageEdit" class="img-fluid" />
-            <div class="message-container imgCon"></div>
-          </div>
-          <div>
-            <label for="name">Name</label>
-            <input id="name" />
-            <div class="message-container nameCon"></div>
-          </div>
-          <div>
-            <label for="price">Price</label>
-            <input id="price" />
-            <div class="message-container priceCon"></div>
-          </div>
-          <div>
-            <label for="description">Description</label>
-            <textarea id="description"></textarea>
-            <div class="message-container descCon"></div>
-          </div>
-          <label for="featured">Featured</label>
-          <input type="checkbox" id="featured" name="" value="" /><br />
-          <button class="edit-btn" type="submit">Edit</button>
-        </form>
       </div>
-      <!-- </div> -->
     </main>
     <script src="/js/settings/components/login/edit.js" type="module"></script>
   </body>

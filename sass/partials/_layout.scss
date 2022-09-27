@@ -7,6 +7,27 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
+.edit-product-form {
+  h2 {
+    text-align: center;
+  }
+}
+
+.add-product-form {
+  h2 {
+    text-align: center;
+  }
+}
+
+.featured-checkbox {
+  display: flex;
+  flex-direction: row;
+
+  #featured {
+    width: 10%;
+  }
+}
+
 .brand-box {
   // margin-right: 0.5rem;
   margin-bottom: 2.5rem;
