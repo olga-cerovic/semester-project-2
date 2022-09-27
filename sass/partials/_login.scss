@@ -72,16 +72,24 @@ textarea {
 //   background: darkred;
 // }
 
-#clear {
-  max-width: 300px;
-  margin-left: 1rem;
-}
+// #clear {
+//   max-width: 300px;
+//   margin-left: 1rem;
+// }
 
 .login-title {
   text-align: center;
 }
 
 /*ADMIN*/
+
+// .logout {
+//   text-decoration: none;
+//   &:hover {
+//     cursor: pointer;
+//     text-decoration: underline;
+//   }
+// }
 
 #imageEdit {
   padding-top: 0.5rem !important;
@@ -102,64 +110,64 @@ textarea {
   }
 }
 
-.login-button {
-  width: 100%;
-  height: 40px;
-  color: $primary-colour;
-  border-radius: 6px;
-}
+// .login-button {
+//   width: 100%;
+//   height: 40px;
+//   color: $primary-colour;
+//   border-radius: 6px;
+// }
 
-.edit-btn,
-.login-button,
-.add-btn {
-  // background-color: $primary-colour-hover;
-  // border: 2px solid $primary-colour-hover;
-  // margin-bottom: 0.5rem;
+// .edit-btn,
+// .login-button,
+// .add-btn {
+//   // background-color: $primary-colour-hover;
+//   // border: 2px solid $primary-colour-hover;
+//   // margin-bottom: 0.5rem;
 
-  &:hover {
-    background-color: $primary-colour;
-    border: 2px solid $primary-colour-hover;
-    color: $primary-colour-hover;
-  }
-}
+//   &:hover {
+//     background-color: $primary-colour;
+//     border: 2px solid $primary-colour-hover;
+//     color: $primary-colour-hover;
+//   }
+// }
 
-.delete-btn,
-.edit-btn,
-.add-btn {
-  all: unset;
-  text-align: center;
-  padding: 0.3rem;
-  border-radius: 6px;
-  color: $primary-colour;
-  &:hover {
-    // background-color: $primary-colour;
-    // border: 2px solid $nav-colour;
-    // color: $nav-colour;
-    cursor: pointer;
-  }
-}
+// .delete-btn,
+// .edit-btn,
+// .add-btn {
+//   all: unset;
+//   text-align: center;
+//   padding: 0.3rem;
+//   border-radius: 6px;
+//   color: $primary-colour;
+//   &:hover {
+//     // background-color: $primary-colour;
+//     // border: 2px solid $nav-colour;
+//     // color: $nav-colour;
+//     cursor: pointer;
+//   }
+// }
 
-.delete-btn {
-  background-color: $nav-colour;
-  border: 2px solid $nav-colour;
-  margin-top: 0.5rem;
-  &:hover {
-    background-color: $primary-colour;
-    border: 2px solid $nav-colour;
-    color: $nav-colour;
-  }
-}
+// .delete-btn {
+//   background-color: $nav-colour;
+//   border: 2px solid $nav-colour;
+//   margin-top: 0.5rem;
+//   &:hover {
+//     background-color: $primary-colour;
+//     border: 2px solid $nav-colour;
+//     color: $nav-colour;
+//   }
+// }
 
-.edit-btn,
-.login-button {
-  background-color: $primary-colour-hover;
-  border: 2px solid $primary-colour-hover;
-  &:hover {
-    background-color: $primary-colour;
-    border: 2px solid $primary-colour-hover;
-    color: $primary-colour-hover;
-  }
-}
+// .edit-btn,
+// .login-button {
+//   background-color: $primary-colour-hover;
+//   border: 2px solid $primary-colour-hover;
+//   &:hover {
+//     background-color: $primary-colour;
+//     border: 2px solid $primary-colour-hover;
+//     color: $primary-colour-hover;
+//   }
+// }
 
 .nav-login {
   justify-content: end;

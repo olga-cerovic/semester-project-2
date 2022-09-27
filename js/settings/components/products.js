@@ -2,8 +2,9 @@ import { baseUrl } from "./login/api.js";
 import displayMessage from "./login/displayMessage.js";
 
 import { getToken } from "./login/storage.js";
-// import { createMenu } from "./createMenu.js";
-// createMenu();
+import { createMenu } from "./login/createMenu.js";
+
+if ("") createMenu();
 
 // const allProductsRowElement = document.getElementById("shop-row");
 
@@ -57,7 +58,7 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                         }</p>
                                                         <a href="product-details.html?id=${
                                                           product.id
-                                                        }" class="btn btn-primary">See Product</a>
+                                                        }" class=" see-product-btn">See Product</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -172,13 +173,15 @@ if (window.location.href.includes("admin-home")) {
 
   getProducts("shop-row", "", 1);
 }
-function checkCartNumber() {
-  let cart = JSON.parse(localStorage.getItem("cart"));
+export function checkCartNumber() {
+  if (!window.location.href.includes("admin")) {
+    let cart = JSON.parse(localStorage.getItem("cart"));
 
-  if (cart) {
-    document.getElementById("cartNumber").textContent = cart.length;
-  } else {
-    document.getElementById("cartNumber").textContent = "0";
+    if (cart) {
+      document.getElementById("cartNumber").textContent = cart.length;
+    } else {
+      document.getElementById("cartNumber").textContent = "0";
+    }
+    checkCartNumber();
   }
 }
-checkCartNumber();

@@ -4,9 +4,11 @@ import displayMessage from "./displayMessage.js";
 import { logOut } from "./logout.js";
 import { getToken } from "./storage.js";
 
-createMenu();
-logOut();
+document.querySelector(".logout").addEventListener("click", logOut);
 
+createMenu();
+// logOut();
+document.querySelector(".messageAdd").style.display = "none";
 const form = document.querySelector("form");
 const img = document.querySelector("#img");
 const name = document.querySelector("#name");
@@ -14,6 +16,10 @@ const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const checkFeature = document.querySelector("#featured");
 const message = document.querySelectorAll(".message-container");
+
+form.addEventListener("keyup", function () {
+  document.querySelector(".messageAdd").style.display = "none";
+});
 
 form.addEventListener("submit", submitForm);
 
@@ -82,7 +88,9 @@ async function addProduct(img, name, price, description, feature) {
     const response = await fetch(url, options);
     const json = await response.json();
 
-    console.log(json);
+    document.querySelector(".messageAdd").style.display = "block";
+    document.querySelector(".messageAdd").textContent = "Product Added!!!";
+    document.getElementById("addForm").reset();
   } catch (error) {
     console.log(error);
   }

@@ -76,9 +76,9 @@ h5 {
   margin: auto;
 }
 
-.btn {
-  width: 100%;
-}
+// .btn {
+//   width: 100%;
+// }
 
 /*  SHOPPING CART   */
 
@@ -96,11 +96,11 @@ h5 {
     justify-content: end;
   }
 
-  .check-out-btn {
-    max-width: 540px;
-    margin: auto;
-    margin-top: 2rem;
-  }
+  // .check-out-btn {
+  //   max-width: 540px;
+  //   margin: auto;
+  //   margin-top: 2rem;
+  // }
 }
 
 .cart-background {
@@ -162,43 +162,8 @@ h5 {
   margin-top: 3rem;
 }
 
-/*   BUTTONS   */
-.btn {
-  background-color: $nav-colour;
-  border: 2px solid $nav-colour;
-  // color: $primary-colour;
-  font-family: sofia-pro-soft, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  &:hover {
-    background-color: $primary-colour;
-    border: 2px solid $nav-colour;
-    color: $nav-colour;
-  }
-}
-
-.search-btn {
-  align-content: center;
-}
-
-button {
-  border-width: 0;
-  border-style: none;
-  border-color: $primary-colour;
-  background-color: $primary-colour;
-}
-
-.search-form {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-items: center;
-  justify-content: center;
-
-  input {
-    width: 100%;
-    border: 0;
-  }
+.deleteItem {
+  cursor: pointer;
 }
 
 .dropdown-custom {

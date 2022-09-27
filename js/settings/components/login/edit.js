@@ -5,6 +5,8 @@ import { logOut } from "./logout.js";
 import { getToken } from "./storage.js";
 createMenu();
 
+document.querySelector(".logout").addEventListener("click", logOut);
+
 document.getElementById("successUpdate").style.display = "none";
 const form = document.querySelector("form");
 const img = document.querySelector("#img");
@@ -18,7 +20,7 @@ let url = new URL(window.location.href);
 let search_params = url.searchParams;
 const id = search_params.get("id");
 getProduct();
-logOut();
+// logOut();
 
 async function getProduct() {
   try {

@@ -25,7 +25,7 @@ export function getProduct() {
                                               <h5 class="card-title">${product.title}</h5>
                                               <p class="card-text">${product.price}</p>
                                               <p class="card-text">${product.description}</p>
-                                              <a href="product-details.html?id=${product.id}" class="btn btn-primary productCart" id="product${product.id}"  data-id="${product.id}">Add To Cart</a>
+                                              <a href="product-details.html?id=${product.id}" class="add-to-cart-btn productCart" id="product${product.id}"  data-id="${product.id}">Add To Cart</a>
                                           </div>
                                         </div>
                                       </div>

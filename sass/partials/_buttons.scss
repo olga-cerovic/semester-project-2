@@ -1,0 +1,148 @@
+/*   BUTTONS   */
+// .btn {
+//   width: 100%;
+//   background-color: $nav-colour;
+//   border: 2px solid $nav-colour;
+// color: $primary-colour;
+//   font-family: sofia-pro-soft, sans-serif;
+//   font-weight: 500;
+//   font-style: normal;
+//   &:hover {
+//     background-color: $primary-colour;
+//     border: 2px solid $nav-colour;
+//     color: $nav-colour;
+//   }
+// }
+
+.search-btn {
+  align-content: center;
+}
+
+// button {
+//   border-width: 0;
+//   border-style: none;
+//   border-color: $primary-colour;
+//   background-color: $primary-colour;
+// }
+
+// .shop-now-btn {
+//   width: 20rem !important;
+// }
+
+.col-md-8 {
+  .add-to-cart-btn {
+    width: 50rem;
+  }
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+
+  input {
+    width: 100%;
+    border: 0;
+  }
+}
+
+.login-button {
+  width: 100%;
+  height: 40px;
+  color: $primary-colour;
+  border-radius: 6px;
+}
+
+.edit-btn,
+.login-button,
+.add-btn {
+  // background-color: $primary-colour-hover;
+  // border: 2px solid $primary-colour-hover;
+  // margin-bottom: 0.5rem;
+
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $primary-colour-hover;
+    color: $primary-colour-hover;
+  }
+}
+
+// .delete-btn,
+.edit-btn,
+.add-btn,
+.delete-btn,
+.see-product-btn,
+.add-to-cart-btn,
+.shop-now-btn,
+.delete-all-btn {
+  font-family: sofia-pro-soft, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  width: 100%;
+  //   all: unset;
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 6px;
+  color: $primary-colour;
+  &:hover {
+    // background-color: $primary-colour;
+    // border: 2px solid $nav-colour;
+    // color: $nav-colour;
+    cursor: pointer;
+  }
+}
+
+.delete-btn,
+.see-product-btn,
+.add-to-cart-btn,
+.shop-now-btn,
+.delete-all-btn {
+  background-color: $nav-colour;
+  border: 2px solid $nav-colour;
+  margin-top: 0.5rem;
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $nav-colour;
+    color: $nav-colour;
+  }
+}
+
+// .banner-container {
+//   .centered {
+//     .shop-now-btn {
+//       max-width: 50%;
+//       margin-top: 1rem;
+//     }
+//   }
+// }
+
+.edit-btn,
+.add-btn,
+.login-button {
+  background-color: $primary-colour-hover;
+  border: 2px solid $primary-colour-hover;
+  &:hover {
+    background-color: $primary-colour;
+    border: 2px solid $primary-colour-hover;
+    color: $primary-colour-hover;
+  }
+}
+
+.check-out-btn {
+  max-width: 540px;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+/*   ADMIN LOGOUT   */
+
+.logout {
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

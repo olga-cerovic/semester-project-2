@@ -1,4 +1,5 @@
 import { baseUrl } from "./login/api.js";
+import { checkCartNumber } from "./products.js";
 
 function changeQuantity() {
   totalPriceCart();
@@ -46,9 +47,11 @@ function renderCart() {
                  class="col-md-4 quantity"
                />
                <p class="col-md-3">
-                 <span><span class="price">${
+                 <span class="price">${
                    product.price + " $"
-                 }</span> </span>
+                 }</span><span class="deleteItem"><i class="fa fa-trash" data-id="${
+            product.id
+          }" aria-hidden="true"></i></span>
                </p>
                </div>
              </div>
@@ -56,6 +59,7 @@ function renderCart() {
          </div>
          <hr/>`;
 
+          document.querySelector(".total-price").style.display = "block";
           totalPriceCart();
 
           //   console.log(product.id);
@@ -69,13 +73,22 @@ function renderCart() {
     });
 
     setTimeout(function () {
+      // cartRoot.innerHTML += `<div><a href="#" class="btn-primary delete-all-btn deleteAll">Delete All</a> </div>`;
       const inputsQ = document.querySelectorAll(".quantity");
+      const deleteI = document.querySelectorAll(".deleteItem");
+      const deleteAll = document.querySelector(".deleteAll");
+
+      deleteAll.addEventListener("click", deleteItems);
       for (let i = 0; i < inputsQ.length; i++) {
         inputsQ[i].addEventListener("change", changeQuantity);
+      }
+      for (let i = 0; i < deleteI.length; i++) {
+        deleteI[i].addEventListener("click", deleteItem);
       }
     }, 200);
   } else {
     cartRoot.innerHTML = "Your Cart is empty!";
+    document.querySelector(".total-price").style.display = "none";
   }
 }
 renderCart();
@@ -89,6 +102,32 @@ function totalPriceCart() {
     console.log(inputs[i].value, parseInt(price[i].textContent));
     total = total + inputs[i].value * parseFloat(price[i].textContent);
   }
-
   document.getElementById("total").textContent = total;
+}
+
+checkCartNumber();
+
+function deleteItem(e) {
+  let id = e.target.dataset.id;
+
+  let cart = JSON.parse(localStorage.getItem("cart"));
+  console.log(cart);
+  let newCart = cart.filter((element) => {
+    console.log(element.id, id);
+  });
+  console.log(newCart);
+
+  localStorage.setItem("cart", JSON.stringify(newCart));
+  renderCart();
+  totalPriceCart();
+  checkCartNumber();
+}
+
+function deleteItems(e) {
+  e.preventDefault();
+  let newCart = [];
+  localStorage.setItem("cart", JSON.stringify(newCart));
+  renderCart();
+  totalPriceCart();
+  checkCartNumber();
 }
