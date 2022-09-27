@@ -16,7 +16,7 @@ const bannerUrl = baseUrl + "home";
                                         <h1>Best Value Deals</h1>
                                         <h3>On Most Popular Brands</h3>
                                         <h5>Additional Discount for Members Only</h5>
-                                        <a href="/shop.html" class="btn shop-now-btn">Shop Now</a>
+                                        <a href="/shop.html" class="btn shop-now-btn pink-cta">Shop Now</a>
                                     </div>
                                     </div>`;
     })
