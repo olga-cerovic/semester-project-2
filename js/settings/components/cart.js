@@ -73,7 +73,7 @@ function renderCart() {
     });
 
     setTimeout(function () {
-      // cartRoot.innerHTML += `<div><a href="#" class="btn-primary delete-all-btn deleteAll">Delete All</a> </div>`;
+      cartRoot.innerHTML += `<div><a href="#" class="btn-primary delete-all-btn deleteAll">Delete All</a> </div>`;
       const inputsQ = document.querySelectorAll(".quantity");
       const deleteI = document.querySelectorAll(".deleteItem");
       const deleteAll = document.querySelector(".deleteAll");
@@ -87,7 +87,7 @@ function renderCart() {
       }
     }, 200);
   } else {
-    cartRoot.innerHTML = "Your Cart is empty!";
+    cartRoot.innerHTML = `<p class="your-cart-msg">Your Cart is empty!</p>`;
     document.querySelector(".total-price").style.display = "none";
   }
 }
