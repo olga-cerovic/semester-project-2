@@ -90,7 +90,7 @@ async function addProduct(img, name, price, description, feature) {
 
     document.querySelector(".message-add-success").style.display = "block";
     document.querySelector(".message-add-success").textContent =
-      "Product Added!!!";
+      "Product Succesfully Added!";
     document.getElementById("addForm").reset();
   } catch (error) {
     console.log(error);
