@@ -27,5 +27,3 @@ const bannerUrl = baseUrl + "home";
 })();
 
 checkCartNumber();
-
-// getBanner();

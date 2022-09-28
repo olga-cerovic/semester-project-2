@@ -20,7 +20,6 @@ let url = new URL(window.location.href);
 let search_params = url.searchParams;
 const id = search_params.get("id");
 getProduct();
-// logOut();
 
 async function getProduct() {
   try {

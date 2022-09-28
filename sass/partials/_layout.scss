@@ -1,3 +1,8 @@
+.hr-decoration {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .your-cart-msg {
   color: $nav-colour;
   padding-bottom: 1rem;
@@ -47,7 +52,6 @@ h2 {
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
-  // margin-right: 0.5rem;
   margin-bottom: 2.5rem;
   margin-left: 1.2rem;
   margin-right: 1.2rem;
@@ -119,11 +123,12 @@ h5 {
   margin: auto;
 }
 
+
+
 /*  SHOPPING CART   */
 
 .cart-container {
   h2 {
-    // padding-top: 3rem;
     margin-bottom: 0 !important;
   }
 
@@ -207,7 +212,6 @@ h5 {
   margin-bottom: 1rem;
 }
 
-
 /*   MEDIA QUERIES   */
 
 @media (max-width: 992px) {
@@ -234,16 +238,4 @@ h5 {
   .payment {
     margin-top: 2rem;
   }
-
-  // .col-5 {
-  //   hr {
-  //     display: none;
-  //   }
-  // }
-
-  // .text-center {
-  //   h2 {
-  //     display: flex;
-  //   }
-  // }
 }
