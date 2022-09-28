@@ -32,11 +32,11 @@ textarea {
 
 /*Messages styling*/
 
-.message {
-  width: 100%;
-  border: 1px solid $background-colour;
-  color: $background-colour;
-}
+// .message {
+//   width: 100%;
+//   border: 1px solid $background-colour;
+//   color: $background-colour;
+// }
 
 .message.error {
   color: $primary-colour;
@@ -44,19 +44,28 @@ textarea {
 }
 
 .message.warning {
-
   color: $nav-colour;
   border: none;
 }
 
-.message.success {
-  border-color: $primary-colour-hover;
-  color: $primary-colour;
-  background: $primary-colour-hover;
+.message.success,
+.message-add-success,
+#successUpdate {
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: $primary-colour !important;
+  background-color: $primary-colour-hover;
+  text-align: center;
+  padding: 1rem;
+  font-family: montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  max-width: 400px;
 }
-
 .login-title {
   text-align: center;
+  margin-top: 1.5rem;
 }
 
 /*ADMIN*/

@@ -8,7 +8,7 @@ document.querySelector(".logout").addEventListener("click", logOut);
 
 createMenu();
 // logOut();
-document.querySelector(".messageAdd").style.display = "none";
+document.querySelector(".message-add-success").style.display = "none";
 const form = document.querySelector("form");
 const img = document.querySelector("#img");
 const name = document.querySelector("#name");
@@ -18,7 +18,7 @@ const checkFeature = document.querySelector("#featured");
 const message = document.querySelectorAll(".message-container");
 
 form.addEventListener("keyup", function () {
-  document.querySelector(".messageAdd").style.display = "none";
+  document.querySelector(".message-add-success").style.display = "none";
 });
 
 form.addEventListener("submit", submitForm);
@@ -88,8 +88,9 @@ async function addProduct(img, name, price, description, feature) {
     const response = await fetch(url, options);
     const json = await response.json();
 
-    document.querySelector(".messageAdd").style.display = "block";
-    document.querySelector(".messageAdd").textContent = "Product Added!!!";
+    document.querySelector(".message-add-success").style.display = "block";
+    document.querySelector(".message-add-success").textContent =
+      "Product Added!!!";
     document.getElementById("addForm").reset();
   } catch (error) {
     console.log(error);
