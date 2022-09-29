@@ -62,10 +62,10 @@ function renderCart() {
           document.querySelector(".total-price").style.display = "block";
           totalPriceCart();
 
-          //   console.log(product.id);
-          //   document
-          //     .getElementById("quantity" + product.id)
-          //     .addEventListener("change", changeQuantity);
+          console.log(product.id);
+          document
+            .getElementById("quantity" + product.id)
+            .addEventListener("change", changeQuantity);
         })
         .catch((error) => {
           console.log(error);

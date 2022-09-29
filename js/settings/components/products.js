@@ -54,7 +54,7 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                           product.title
                                                         }</h5>
                                                         <p class="card-text">${
-                                                          product.price
+                                                          product.price + "$"
                                                         }</p>
                                                         <a href="product-details.html?id=${
                                                           product.id
@@ -78,7 +78,7 @@ export async function getProducts(elementId, filters = "", param = 0) {
                                                             product.title
                                                           }</h5>
                                                           <p class="card-text">${
-                                                            product.price
+                                                            product.price + "$"
                                                           }</p>
                                                           <a href="admin-edit-product.html?id=${
                                                             product.id

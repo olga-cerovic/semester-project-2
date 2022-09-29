@@ -23,8 +23,15 @@ function submitForm(event) {
   const usernameValue = username.value.trim();
   const passwordValue = password.value.trim();
 
-  if (usernameValue.length === 0 || passwordValue.length === 0) {
-    return displayMessage("warning", "Invalid values", ".message-container");
+  // if (usernameValue.length === 0 || passwordValue.length === 0) {
+  //   return displayMessage("warning", "Invalid values", ".message-container");
+  // }
+
+  if (usernameValue.length === 0) {
+    displayMessage("warning", "Invalid user name", ".login-username-msg");
+  }
+  if (passwordValue.length === 0) {
+    displayMessage("warning", "Invalid password", ".login-pass-msg");
   }
 
   doLogin(usernameValue, passwordValue);
@@ -56,9 +63,15 @@ async function doLogin(username, password) {
       location.href = "admin-home.html";
     }
 
-    if (json.error) {
-      displayMessage("warning", "Invalid login details", ".message-container");
-    }
+    // if (json.error) {
+    //   // displayMessage("warning", "Invalid login details", ".message-container");
+    //   if (usernameValue.length === 0) {
+    //     displayMessage("warning", "Invalid user name", ".login-username-msg");
+    //   }
+    //   if (passwordValue.length === 0) {
+    //     displayMessage("warning", "Invalid password", ".login-pass-msg");
+    //   }
+    // }
   } catch (error) {
     console.log(error);
   }
