@@ -3,11 +3,22 @@
 }
 
 .navbar-nav .nav-link {
-  color: $primary-colour !important;
+  color: $primary-colour;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-colour !important;
+    color: $nav-colour;
+  }
 }
 
 .navbar-nav .active {
   text-decoration: underline;
+  color: $primary-colour !important;
+  &:hover {
+    background-color: $nav-colour !important;
+    color: $primary-colour !important;
+  }
 }
 
 .bg-light {
@@ -42,6 +53,7 @@
 }
 
 .nav-link {
+  cursor: unset;
   font-family: sofia-pro, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -105,7 +117,6 @@
 .navbar-toggler {
   border: none;
 }
-
 /*   MEDIA QUERIES   */
 
 @media (max-width: 1200px) {

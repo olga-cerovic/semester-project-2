@@ -71,6 +71,18 @@ h2 {
   color: $background-dark;
   font-size: 1em;
   align-items: center;
+
+  h5 {
+    font-family: montserrat, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  a {
+    font-family: montserrat, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
 }
 
 .contact-us,
@@ -91,6 +103,10 @@ h2 {
   display: flex;
   flex-direction: row;
   font-size: 2em;
+
+  i {
+    padding-right: 0.5rem;
+  }
 }
 
 .follow-us {

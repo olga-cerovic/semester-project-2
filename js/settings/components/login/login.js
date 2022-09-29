@@ -4,7 +4,6 @@ import { baseUrl } from "./api.js";
 import { createMenu } from "./createMenu.js";
 import { logOut } from "./logout.js";
 
-
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
@@ -14,9 +13,6 @@ const logoutButtonElement = document.querySelector(".logout");
 createMenu();
 
 form.addEventListener("submit", submitForm);
-
-
-
 
 function submitForm(event) {
   event.preventDefault();
